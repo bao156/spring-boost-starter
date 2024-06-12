@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  intern-postgres:
+    container_name: intern-postgres
+    image: postgres:11
+    environment:
+      POSTGRES_DB: intern-starter
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: NPhTQts4pwfdasjs
+    ports:
+      - "5432:5432"
+    networks:
+      - es-network
+
+networks:
+  es-network:
+    driver: bridge

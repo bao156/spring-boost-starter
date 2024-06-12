@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: ${activatedSpringProfile}
+  datasource:
+    url: jdbc:postgresql://localhost:5432/intern-starter?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    username: postgres
+    password: NPhTQts4pwfdasjs
+  flyway:
+    enabled: true
+    table: schema_versions
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+jwt:
+  secret: R1BYcTVXVGNDU2JmWHVnZ1lnN0FKeGR3cU1RUU45QXV4SDJONFZ3ckhwS1N0ZjNCYVkzZ0F4RVBSS1UzRENwRw==
+  expirationms: 86400000

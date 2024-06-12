@@ -1,0 +1,3 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://intern-postgres:5432/intern-starter?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
